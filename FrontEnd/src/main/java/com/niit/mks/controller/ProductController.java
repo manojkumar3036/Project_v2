@@ -60,14 +60,17 @@ public class ProductController {
 	}
 
 	@RequestMapping("/product/update/{id}")
-	public String updateProduct(@PathVariable int id, Model model) {
+	public ModelAndView updateProduct(@PathVariable int id) {
 
+		ModelAndView model=new ModelAndView("index");
 		Product product = prodDAO.getProduct(id);
 
-		model.addAttribute("productdata", product);
-		model.addAttribute("productlist", prodDAO.displayAllProduct());
+		model.addObject("productdata", product);
+		model.addObject("productlist", prodDAO.displayAllProduct());
+		model.addObject("isUserClickedProduct", "true");
+		
 
-		return "productform";
+		return model;
 
 	}
 
