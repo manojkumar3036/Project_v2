@@ -46,8 +46,10 @@ public class ProductController {
 		MultipartFile prodImage = product.getFile();
 		if (!prodImage.isEmpty()) {
 			Path paths = Paths
-					.get("E:/DevOps TTT/workspace/mkecommerce/FrontEnd/src/main/webapp/WEB-INF/resources/images/"
+					.get("C:/Users/MANOJ/git/Project_v2/FrontEnd/src/main/webapp/WEB-INF/resources/images/"
 							+ product.getId() + ".png");
+			
+			// C:\Users\MANOJ\git\Project_v2\FrontEnd\src
 			try {
 				prodImage.transferTo(new File(paths.toString()));
 			} catch (Exception e) {
