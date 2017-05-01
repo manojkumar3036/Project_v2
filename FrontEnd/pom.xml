@@ -15,6 +15,12 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.niit.mks</groupId>
+			<artifactId>ShoppingBackEnd</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.3.4.RELEASE</version>
@@ -26,19 +32,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.4.192</version>
 		</dependency>
-		<dependency>
-			<groupId>com.niit.mks</groupId>
-			<artifactId>ShoppingBackEnd</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		
-		</dependency>
 	</dependencies>
 
 	<build>

@@ -39,7 +39,8 @@ public class ProductController {
 	public String addProduct(@Valid @ModelAttribute("productdata") Product product, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 			model.addAttribute("productlist", prodDAO.displayAllProduct());
-			// return "index";
+			model.addAttribute("isUserClickedProduct","true");
+			 return "index";
 		}
 
 		prodDAO.insertProduct(product);
