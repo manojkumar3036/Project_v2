@@ -76,6 +76,18 @@ public class ProductController {
 		return model;
 
 	}
+	
+	@RequestMapping("/product/delete/{id}")
+	public String deleteProduct(@PathVariable int id, Model model)
+	{
+		//ModelAndView model=new ModelAndView("index");
+		prodDAO.deleteProduct(id);
+		model.addAttribute("productdata", new Product());
+		model.addAttribute("productlist", prodDAO.displayAllProduct());
+		model.addAttribute("isUserClickedProduct", "true");
+		
+		return "index";
+	}
 
 
 	@RequestMapping("/products/all")

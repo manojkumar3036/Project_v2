@@ -42,4 +42,12 @@ public class ProductDAOImpl implements ProductDAO {
 		return singleProduct;
 	}
 
+	public void deleteProduct(int id) {
+		 Product product=(Product)sessionFactory.getCurrentSession().get(Product.class, id);
+		 sessionFactory.getCurrentSession().delete(product);
+		 
+		
+		
+	}
+
 }

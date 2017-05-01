@@ -99,7 +99,8 @@
 				<td>${p.description }</td>
 				<td>${p.quantity }</td>
 				<td>${p.quantity * p.price }</td>
-				<td><a href=""><span class="glyphicon glyphicon-trash"></span></a>
+				<c:url var="deleteurl" value="/product/delete/${ p.id}"></c:url>
+				<td><a href="${deleteurl }"><span class="glyphicon glyphicon-trash"></span></a>
 				<c:url var="updateurl" value="/product/update/${ p.id}"></c:url>
 				<a href="${updateurl }"><span class="glyphicon glyphicon-pencil"></span></a></td>
 				
