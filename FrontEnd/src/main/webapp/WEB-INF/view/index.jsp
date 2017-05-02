@@ -21,14 +21,14 @@ padding:10px 0;
 <div class="col-md-3">
 				<div class="customeSideBar">
 					<ul class="nav nav-pills nav-stacked">
-						<li class="active"><a href="#">Home</a></li>
-						<li class="dropdown"><a class="dropdown-toggle"
+						<li class="active"><a href="#">Admin Panel</a></li>
+						<!-- <li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="#">Submenu 1-1</a></li>
 								<li><a href="#">Submenu 1-2</a></li>
 								<li><a href="#">Submenu 1-3</a></li>
-							</ul></li>
+							</ul></li> -->
 						<c:url value="/product" var="producturl"></c:url>
 						<li><a href="${producturl }">Product</a></li>
 						<c:url value="/category" var="categoryurl"></c:url>

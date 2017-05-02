@@ -3,7 +3,7 @@
 	<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-	<spring:url value="resources/images/" var="images"/>
+	<spring:url value="resources/images/productimages/" var="images"/>
 	<%@page isELIgnored="false" %>
 	
 	
@@ -19,9 +19,10 @@
 			<div class="col-md-10">
 			<c:url value="/addProduct.do" var="inserturl"></c:url>
 			<form:form action="${inserturl }" method="post" modelAttribute="productdata" enctype="multipart/form-data">
-				<div class="form-group">					
-					<form:input path="id" disabled="true" placeholder="Enter Product ID"
-						class="form-control" />
+				<div class="form-group">	
+					<form:hidden path="id"/>				
+					<%-- <form:input path="id" disabled="true" placeholder="Enter Product ID"
+						class="form-control" /> --%>
 						
 				</div>
 				<div class="form-group">
@@ -91,7 +92,7 @@
 					</thead>
 				<c:forEach items="${productlist }" var="p">
 				<tr>
-				<td><c:url var="src" value="${images}/${p.id}.png"></c:url>
+				<td><c:url var="src" value="${images}/${p.id}.jpg"></c:url>
 				<img src="${src}" style="width: 60%" align="middle"/></td>
 				<td>${p.id }</td>
 				<td>${p.name }</td>

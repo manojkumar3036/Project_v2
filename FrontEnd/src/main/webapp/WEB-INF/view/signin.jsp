@@ -33,7 +33,7 @@
 			<!-- End of col-md-6 class -->
 		</div>
 		<!-- End of row -->
-		
+		</div>
 	<!-- End of main container -->
 </body>
 </html>
