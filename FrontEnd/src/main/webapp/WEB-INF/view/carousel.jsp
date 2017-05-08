@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -16,8 +16,8 @@
   <style>
   
  .carousel .item {
-  height: 200px;
-  width: 800px;
+	height: 200px;
+	width: 100%;
 	}
 
 .item img {
@@ -31,22 +31,21 @@
 </head>
 <body>
 
-<div class="container-fluid">
 
-  <h2>Carousel Example</h2>
+ 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
+      
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="resources/images/banner1.jpg" alt="Los Angeles" style="width:100%;">
         <div class="carousel-caption">
           <h3>Los Angeles</h3>
           <p>LA is always so much fun!</p>
@@ -54,20 +53,14 @@
       </div>
 
       <div class="item">
-        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+        <img src="resources/images/banner2.jpg" alt="Chicago" style="width:100%;">
         <div class="carousel-caption">
           <h3>Chicago</h3>
           <p>Thank you, Chicago!</p>
         </div>
       </div>
     
-      <div class="item">
-        <img src="ny.jpg" alt="New York" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>We love the Big Apple!</p>
-        </div>
-      </div>
+      
   
     </div>
 
@@ -82,8 +75,6 @@
     </a>
   </div>
   
-</div>
 
 
-</body>
-</html>
+

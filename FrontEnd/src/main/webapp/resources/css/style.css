@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+body *{
+	display:block;
+	padding:0;
+	margin:0;
+}
+.mksitemcontianer{
+	background-color:#F2F1EF;
+	border:1px solid gray;
+	padding:10px;
+}

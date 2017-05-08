@@ -22,7 +22,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	public void insertProduct(Product product) {
 
-		sessionFactory.getCurrentSession().persist(product);
+		sessionFactory.getCurrentSession().save(product);
 	}
 
 	@SuppressWarnings("unchecked")
