@@ -125,6 +125,7 @@ public class ProductController {
 		return prodDAO.displayAllProduct();
 	}
 
+	// -------- From here the catgories mapping starts--------------------------
 	/*
 	 * 
 	 * Implementation logic for displaying and adding categories. Moreover
@@ -142,13 +143,24 @@ public class ProductController {
 
 	@RequestMapping("/addcategory.do" )
 	public String addCategory(@ModelAttribute("categorydata") Category category,Model model)
-	{
+	{/*
 		model.addAttribute("isUserClickedCategory", "true");
-		model.addAttribute("categorylist", categoryDAO.displayAllCategories());
+		model.addAttribute("categorylist", categoryDAO.displayAllCategories());*/
 		categoryDAO.insertCategory(category);
 		
-		return "index";
+		return "redirect:/category";
 	}
+	
+	@RequestMapping("/category/delete/{id}")
+	public String deleteProduct(@PathVariable int id)
+	{
+		categoryDAO.deleteCategory(id);
+		return "redirect:/category";
+	}
+	
+	
+	// -------- From here the supplier mapping starts--------------------------
+	
 	@RequestMapping("/supplier")
 	public String showSupplierForm(Model model) {
 		model.addAttribute("isUserClickedSupplier", "true");

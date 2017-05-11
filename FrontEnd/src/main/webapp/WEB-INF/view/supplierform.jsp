@@ -39,8 +39,11 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th>Supplier ID</th>
-							<th>Supplier Name</th>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Address</th>
+							<th>Category</th>
+							<th>Quantity</th>
 							
 						</tr>
 					</thead>

@@ -11,7 +11,8 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<form:form action="/addcategory.do" method="post"
+	<c:url value="/addcategory.do" var="categoryurl"></c:url>
+		<form:form action="${categoryurl}" method="post"
 			modelAttribute="categorydata">
 			<div class="row">
 				<div class="col-md-6">
@@ -37,7 +38,7 @@
 			</div>
 			<!-- End of row -->
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-8">
 					<table class="table">
 						<thead>
 							<tr>
@@ -51,10 +52,9 @@
 							<tr>
 								<td>${c.id }</td>
 								<td>${c.categoryName }</td>
-
-								<c:url var="deleteurl" value="/product/delete/${ p.id}"></c:url>
-								<td><a href="${deleteurl }"> <span
-										class="glyphicon glyphicon-trash"></span></a>
+								<c:url var="deleteurl" value="/category/delete/${ c.id}"></c:url>
+								<td><a href="${deleteurl }"><span
+										class="glyphicon glyphicon-trash"></span></a></td>
 							</tr>
 
 
